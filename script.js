@@ -14,6 +14,11 @@ const topics = [
       "法律や支え": ["障害者基本法", "バリアフリー法", "障害者差別解消法", "福祉サービスや支援員"],
       "まとめ": ["設備だけでなく人の理解も必要", "社会全体で支え合うことが大切"]
     },
+    quiz: {
+      question: "バリアフリーの説明として正しいのはどれ？",
+      choices: ["だれでも安全に使えるようにする工夫", "高い建物をたくさん作ること", "車だけが通りやすくすること"],
+      answer: 0
+    },
     resources: [
       { label: "内閣府 キッズページ", url: "https://www8.cao.go.jp/shougai/kids/" },
       { label: "NHK for School", url: "https://www.nhk.or.jp/school/" }
@@ -29,6 +34,11 @@ const topics = [
       "困りごと": ["体力や判断力の低下", "病気やけが", "孤独", "詐欺被害"],
       "支え": ["年金制度", "介護保険", "デイサービス・訪問介護", "地域の見守り"],
       "まとめ": ["医療・介護・地域のつながりが必要", "若い世代も支える意識が大切"]
+    },
+    quiz: {
+      question: "高齢者の生活を支える制度として正しいのはどれ？",
+      choices: ["介護保険", "関税", "裁判員制度"],
+      answer: 0
     },
     resources: [
       { label: "政府広報オンライン", url: "https://www.gov-online.go.jp/" },
@@ -46,6 +56,11 @@ const topics = [
       "社会の取り組み": ["多言語対応", "男女共同参画", "LGBTQ理解教育", "差別を禁止する法律"],
       "まとめ": ["ちがいを受け入れ、尊重することが大切"]
     },
+    quiz: {
+      question: "多様な人々の人権で大切なことはどれ？",
+      choices: ["ちがいを認めて尊重する", "自分と同じ考えだけを選ぶ", "見た目で判断する"],
+      answer: 0
+    },
     resources: [
       { label: "法務省 人権ライブラリー", url: "https://www.moj.go.jp/JINKEN/" },
       { label: "NHK for School", url: "https://www.nhk.or.jp/school/" }
@@ -61,6 +76,11 @@ const topics = [
       "具体例": ["選挙で代表者を選ぶ", "世論が政策に影響する"],
       "ポイント": ["権利だけでなく責任もある", "政治に関心を持ち続ける"],
       "まとめ": ["参加することが民主主義を守る力になる"]
+    },
+    quiz: {
+      question: "国民主権の説明として正しいのはどれ？",
+      choices: ["国のあり方を国民が決める", "王様がすべて決める", "裁判所だけが政治を決める"],
+      answer: 0
     }
   },
   {
@@ -74,6 +94,11 @@ const topics = [
       "問題点": ["一部の意見だけが反映される", "若い世代の声が届きにくい"],
       "改善方法": ["主権者教育", "SNSでの発信", "期日前投票や不在者投票"],
       "まとめ": ["選挙に参加しないと社会の方向を決めにくくなる"]
+    },
+    quiz: {
+      question: "投票率が低いと起こりやすい問題はどれ？",
+      choices: ["一部の意見だけが反映されやすい", "全員の意見が平等に届く", "政治への関心が必ず高まる"],
+      answer: 0
     }
   },
   {
@@ -87,6 +112,11 @@ const topics = [
       "使い道": ["教育", "福祉", "公共事業", "警察・消防"],
       "問題点": ["使い道が分かりにくい", "無駄づかい"],
       "まとめ": ["社会を支えるために必要、透明性と公平性が大切"]
+    },
+    quiz: {
+      question: "税金の主な使い道として正しいのはどれ？",
+      choices: ["教育や福祉", "個人のおこづかい", "ゲームの課金だけ"],
+      answer: 0
     }
   },
   {
@@ -100,6 +130,11 @@ const topics = [
       "よい点": ["多様な意見が入る", "社会への理解が深まる"],
       "課題": ["精神的な負担", "内容が専門的で難しい"],
       "まとめ": ["公平で開かれた裁判を目指す仕組み"]
+    },
+    quiz: {
+      question: "裁判員制度の目的に近いものはどれ？",
+      choices: ["国民感覚を裁判に反映する", "投票率を上げる", "税金を減らす"],
+      answer: 0
     }
   },
   {
@@ -111,6 +146,11 @@ const topics = [
       "内容": ["戦争をしないで平和的に解決する"],
       "背景": ["過去の戦争の反省", "多くの命やくらしが失われた経験"],
       "まとめ": ["命を守るための重要な原則"]
+    },
+    quiz: {
+      question: "平和主義の考え方として正しいのはどれ？",
+      choices: ["戦争をせず平和的に解決を目指す", "意見が違えばすぐに争う", "話し合いは不要だと考える"],
+      answer: 0
     }
   },
   {
@@ -123,6 +163,11 @@ const topics = [
       "具体例": ["国同士の戦争", "内戦"],
       "解決への取り組み": ["国連の仲介", "PKO", "国際協力"],
       "まとめ": ["対話・理解・協力を長く続けることが必要"]
+    },
+    quiz: {
+      question: "世界の争いごとの解決に向けた取り組みはどれ？",
+      choices: ["国連の仲介や国際協力", "SNSで悪口を広げる", "対話をやめる"],
+      answer: 0
     }
   },
   {
@@ -135,6 +180,11 @@ const topics = [
       "具体的活動": ["自衛隊の防衛・災害救助", "国際協力", "PKO参加"],
       "役割": ["国内の安全を守る", "世界の平和に貢献する"],
       "まとめ": ["生活を支え、国際社会と協力することが平和を守ること"]
+    },
+    quiz: {
+      question: "日本の平和への取り組みの例として正しいのはどれ？",
+      choices: ["災害救助や国際協力", "学校をなくすこと", "税金を使わないこと"],
+      answer: 0
     }
   },
   {
@@ -146,6 +196,11 @@ const topics = [
       "共通すること": ["すべての人が大切にされる社会をつくる"],
       "大切な行動": ["正しく知る", "関心をもつ", "自分にできる行動をする"],
       "まとめ": ["一人ひとりの意識が社会を変える力になる"]
+    },
+    quiz: {
+      question: "全体まとめで大切な行動はどれ？",
+      choices: ["正しく知って、自分にできる行動をする", "何も調べずに決めつける", "関心を持たないようにする"],
+      answer: 0
     }
   }
 ];
@@ -191,6 +246,29 @@ function renderTopic(index) {
     .map((resource) => `<li><a href="${resource.url}" target="_blank" rel="noopener noreferrer">${resource.label}</a></li>`)
     .join("");
 
+  const quizBlock = topic.quiz
+    ? `
+    <section class="block quiz-block">
+      <h3>🎯 ミニクイズ</h3>
+      <p class="quiz-question">${topic.quiz.question}</p>
+      <div class="quiz-choices">
+        ${topic.quiz.choices
+          .map(
+            (choice, choiceIndex) => `
+          <label class="quiz-choice">
+            <input type="radio" name="quiz-${index}" value="${choiceIndex}" />
+            <span>${choice}</span>
+          </label>
+        `
+          )
+          .join("")}
+      </div>
+      <button type="button" class="quiz-check-btn" data-topic-index="${index}">こたえをチェック</button>
+      <p class="quiz-result" id="quiz-result-${index}" aria-live="polite"></p>
+    </section>
+  `
+    : "";
+
   topicCard.innerHTML = `
     <div class="topic-header">
       <h2>${topic.icon} ${topic.title}</h2>
@@ -211,11 +289,40 @@ function renderTopic(index) {
       <ul>${resourceLinks}</ul>
       <p class="prompt">検索キーワード例: 「${topic.title} 原因」「${topic.title} 解決 方法」「${topic.title} 自分にできること」</p>
     </section>
+    ${quizBlock}
   `;
+
+  const checkBtn = topicCard.querySelector(".quiz-check-btn");
+  if (checkBtn) {
+    checkBtn.addEventListener("click", () => checkQuiz(index));
+  }
 
   if (!fields.title.value.trim()) {
     fields.title.value = topic.title;
     saveMemo();
+  }
+}
+
+function checkQuiz(index) {
+  const topic = topics[index];
+  if (!topic?.quiz) return;
+  const selected = topicCard.querySelector(`input[name="quiz-${index}"]:checked`);
+  const result = document.getElementById(`quiz-result-${index}`);
+  if (!result) return;
+
+  if (!selected) {
+    result.textContent = "👉 まずは1つ選んでみよう！";
+    result.style.color = "#a35f00";
+    return;
+  }
+
+  const selectedIndex = Number(selected.value);
+  if (selectedIndex === topic.quiz.answer) {
+    result.textContent = "⭕ 正解！その調子で学ぼう！";
+    result.style.color = "var(--ok)";
+  } else {
+    result.textContent = "❌ おしい！もう一度、上の内容を読んで考えてみよう。";
+    result.style.color = "var(--danger)";
   }
 }
 
