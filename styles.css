@@ -20,6 +20,8 @@ body {
   font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
   background: linear-gradient(180deg, #eef6ff, var(--bg));
   color: var(--ink);
+  font-size: 18px;
+  line-height: 1.85;
 }
 
 .hero {
@@ -29,14 +31,15 @@ body {
 
 .hero h1 {
   margin: 0 0 10px;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  line-height: 1.4;
 }
 
 .hero p {
   margin: 0 auto;
   max-width: 680px;
   color: var(--sub);
-  line-height: 1.7;
+  line-height: 1.95;
 }
 
 .tips {
@@ -52,8 +55,9 @@ body {
   color: #214d99;
   border: 1px solid #c7dbff;
   border-radius: 999px;
-  padding: 7px 12px;
-  font-size: 0.9rem;
+  padding: 9px 14px;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .layout {
@@ -81,7 +85,7 @@ body {
 
 .sidebar h2 {
   margin-top: 0;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 #topic-nav {
@@ -93,11 +97,14 @@ body {
 .topic-btn {
   border: 1px solid var(--border);
   background: #fff;
-  padding: 10px;
+  padding: 12px 13px;
   border-radius: 10px;
   text-align: left;
   cursor: pointer;
   color: var(--ink);
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.7;
 }
 
 .topic-btn:hover,
@@ -112,7 +119,11 @@ body {
 }
 
 .card {
-  padding: 20px;
+  padding: 24px;
+}
+
+.card p {
+  line-height: 1.95;
 }
 
 .topic-header {
@@ -133,7 +144,7 @@ body {
 
 .block {
   margin-top: 14px;
-  padding: 12px;
+  padding: 14px;
   border-radius: 12px;
   border: 1px dashed #bfd1ee;
   background: #f9fbff;
@@ -141,7 +152,7 @@ body {
 
 .block h3 {
   margin: 0 0 8px;
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 .block a {
@@ -152,13 +163,13 @@ body {
 .prompt {
   margin: 8px 0 0;
   color: var(--sub);
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
 
 ul {
   margin: 0;
   padding-left: 20px;
-  line-height: 1.8;
+  line-height: 2;
 }
 
 .memo-help {
@@ -175,6 +186,7 @@ label {
   display: grid;
   gap: 7px;
   font-weight: 700;
+  font-size: 1.03rem;
 }
 
 input,
@@ -182,9 +194,14 @@ textarea {
   width: 100%;
   border: 1px solid #bfd0ec;
   border-radius: 10px;
-  padding: 10px;
+  padding: 12px;
   font: inherit;
-  font-weight: 500;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+textarea {
+  min-height: 7em;
 }
 
 input:focus,
@@ -203,11 +220,12 @@ textarea:focus {
 button {
   border: none;
   border-radius: 10px;
-  padding: 10px 14px;
+  padding: 12px 16px;
   font-weight: 700;
   cursor: pointer;
   background: var(--accent);
   color: #fff;
+  font-size: 1rem;
 }
 
 button.danger {
