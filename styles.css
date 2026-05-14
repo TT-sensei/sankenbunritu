@@ -144,6 +144,17 @@ body {
   font-size: 1rem;
 }
 
+.block a {
+  color: #1d56c7;
+  font-weight: 700;
+}
+
+.prompt {
+  margin: 8px 0 0;
+  color: var(--sub);
+  font-size: 0.92rem;
+}
+
 ul {
   margin: 0;
   padding-left: 20px;
