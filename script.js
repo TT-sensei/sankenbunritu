@@ -13,7 +13,11 @@ const topics = [
       "困っていること": ["移動しにくい", "情報が分かりにくい", "災害時の避難が難しい", "周囲の理解不足"],
       "法律や支え": ["障害者基本法", "バリアフリー法", "障害者差別解消法", "福祉サービスや支援員"],
       "まとめ": ["設備だけでなく人の理解も必要", "社会全体で支え合うことが大切"]
-    }
+    },
+    resources: [
+      { label: "内閣府 キッズページ", url: "https://www8.cao.go.jp/shougai/kids/" },
+      { label: "NHK for School", url: "https://www.nhk.or.jp/school/" }
+    ]
   },
   {
     title: "高齢者の人権",
@@ -25,7 +29,11 @@ const topics = [
       "困りごと": ["体力や判断力の低下", "病気やけが", "孤独", "詐欺被害"],
       "支え": ["年金制度", "介護保険", "デイサービス・訪問介護", "地域の見守り"],
       "まとめ": ["医療・介護・地域のつながりが必要", "若い世代も支える意識が大切"]
-    }
+    },
+    resources: [
+      { label: "政府広報オンライン", url: "https://www.gov-online.go.jp/" },
+      { label: "NHK for School", url: "https://www.nhk.or.jp/school/" }
+    ]
   },
   {
     title: "多様な人々の人権",
@@ -37,7 +45,11 @@ const topics = [
       "課題": ["言葉の壁", "文化の違いによる誤解", "性差別", "ネット上の偏見"],
       "社会の取り組み": ["多言語対応", "男女共同参画", "LGBTQ理解教育", "差別を禁止する法律"],
       "まとめ": ["ちがいを受け入れ、尊重することが大切"]
-    }
+    },
+    resources: [
+      { label: "法務省 人権ライブラリー", url: "https://www.moj.go.jp/JINKEN/" },
+      { label: "NHK for School", url: "https://www.nhk.or.jp/school/" }
+    ]
   },
   {
     title: "国民主権",
@@ -169,6 +181,16 @@ function renderTopic(index) {
     )
     .join("");
 
+  const essentials = Object.values(topic.points)
+    .flat()
+    .slice(0, 3)
+    .map((point) => `<li>${point}</li>`)
+    .join("");
+
+  const resourceLinks = (topic.resources || [])
+    .map((resource) => `<li><a href="${resource.url}" target="_blank" rel="noopener noreferrer">${resource.label}</a></li>`)
+    .join("");
+
   topicCard.innerHTML = `
     <div class="topic-header">
       <h2>${topic.icon} ${topic.title}</h2>
@@ -176,6 +198,19 @@ function renderTopic(index) {
     </div>
     <p>${topic.free}</p>
     ${blocks}
+
+    <section class="block guarantee">
+      <h3>✅ 最低限ここをおさえよう</h3>
+      <ul>${essentials}</ul>
+      <p class="prompt">この3つを見ながら、下のノートに1文ずつ書いてみよう。</p>
+    </section>
+
+    <section class="block deep-dive">
+      <h3>🚪 さらに深める入口</h3>
+      <p>次のサイトで、言葉を変えて調べると理解が深まるよ。</p>
+      <ul>${resourceLinks}</ul>
+      <p class="prompt">検索キーワード例: 「${topic.title} 原因」「${topic.title} 解決 方法」「${topic.title} 自分にできること」</p>
+    </section>
   `;
 
   if (!fields.title.value.trim()) {
