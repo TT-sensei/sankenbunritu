@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>社会の問題しらべノート（小学6年生向け）</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>📘 社会の問題しらべノート</h1>
+      <p>
+        小学6年生向けの調べ学習サイトです。<br />
+        気になるテーマをえらんで、読んで、メモして、自分の言葉でまとめよう！
+      </p>
+      <div class="tips">
+        <span>🧠 まず読む</span>
+        <span>✏️ つぎにメモ</span>
+        <span>💬 最後に自分の考え</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <h2>📚 テーマをえらぼう</h2>
+        <nav id="topic-nav" aria-label="学習テーマ一覧"></nav>
+      </aside>
+
+      <section class="content">
+        <article id="topic-card" class="card" aria-live="polite"></article>
+
+        <section class="memo card">
+          <h2>📝 マイノート</h2>
+          <p class="memo-help">
+            下のワークに書くと、自動で保存されるよ（同じブラウザで見ればのこるよ）。
+          </p>
+
+          <div class="memo-grid">
+            <label>
+              ① 今日えらんだテーマ
+              <input id="memo-title" type="text" placeholder="例：選挙の投票率の低さ" />
+            </label>
+
+            <label>
+              ② 分かったこと（事実）
+              <textarea id="memo-fact" rows="4" placeholder="例：若い世代の投票率が低い。理由は〜"></textarea>
+            </label>
+
+            <label>
+              ③ びっくりしたこと・気づいたこと
+              <textarea id="memo-surprise" rows="3" placeholder="例：自分の一票も大切だと分かった。"></textarea>
+            </label>
+
+            <label>
+              ④ 自分にできること
+              <textarea id="memo-action" rows="3" placeholder="例：ニュースを見て、家族と話し合う。"></textarea>
+            </label>
+          </div>
+
+          <div class="memo-actions">
+            <button id="copy-btn" type="button">📋 ノートをコピー</button>
+            <button id="clear-btn" type="button" class="danger">🧹 ノートを消す</button>
+          </div>
+          <p id="toast" class="toast" role="status"></p>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>🌈 ちがいを知ることは、やさしい社会をつくる第一歩！</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
