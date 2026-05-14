@@ -232,6 +232,10 @@ button.danger {
   background: var(--danger);
 }
 
+button.topic-btn {
+  color: var(--ink);
+}
+
 .toast {
   min-height: 1.2em;
   color: var(--ok);
