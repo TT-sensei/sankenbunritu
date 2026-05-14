@@ -9,11 +9,14 @@
   <body>
     <header class="hero">
       <h1>📘 社会の問題しらべノート</h1>
-      <p>短文で終わらず、根拠をもって説明できる文章を書こう。</p>
+      <p>
+        小学6年生向けの調べ学習サイトです。<br />
+        気になるテーマをえらんで、読んで、メモして、自分の言葉でまとめよう！
+      </p>
       <div class="tips">
-        <span>🧠 理由を書く</span>
-        <span>✏️ 具体例を書く</span>
-        <span>💬 自分の考えを書く</span>
+        <span>🧠 まず読む</span>
+        <span>✏️ つぎにメモ</span>
+        <span>💬 最後に自分の考え</span>
       </div>
     </header>
 
@@ -21,19 +24,6 @@
       <aside class="sidebar">
         <h2>📚 テーマをえらぼう</h2>
         <nav id="topic-nav" aria-label="学習テーマ一覧"></nav>
-
-        <section class="teacher-mode">
-          <h3>👩‍🏫 教師用モード</h3>
-          <label><input type="checkbox" id="toggle-questions" checked /> 問いを表示</label>
-          <label><input type="checkbox" id="toggle-challenge" checked /> チャレンジゾーンを表示</label>
-          <label>段階解放
-            <select id="feature-level">
-              <option value="1">レベル1（最低限）</option>
-              <option value="2" selected>レベル2（標準）</option>
-              <option value="3">レベル3（すべて）</option>
-            </select>
-          </label>
-        </section>
       </aside>
 
       <section class="content">
@@ -41,74 +31,44 @@
 
         <section class="memo card">
           <h2>📝 マイノート</h2>
-          <div id="writing-guide" class="guide-box">
-            <p><strong>基本型：</strong>「〇〇は、〜〜です。なぜなら、〜〜だからです。例えば、〜〜。」</p>
-            <p><strong>発展型：</strong>「まず、〜〜。次に、〜〜。そのため、〜〜といえます。」</p>
-            <p><strong>比較型：</strong>「〇〇と△△を比べると、〜〜がちがいます。理由は〜〜です。」</p>
-          </div>
+          <p class="memo-help">
+            まずは短くてOK！「事実・気づき・行動」を1文ずつ書くと、自動で保存されるよ。
+          </p>
 
           <div class="memo-grid">
-            <label>① 今日えらんだテーマ
-              <input id="memo-title" type="text" />
+            <label>
+              ① 今日えらんだテーマ
+              <input id="memo-title" type="text" placeholder="例：選挙の投票率の低さ" />
             </label>
 
-            <label>② 分かったこと（事実・理由・具体例）
-              <textarea id="memo-fact" rows="4" data-min="50" data-target="100" placeholder="型に沿って書こう"></textarea>
-              <small class="counter" id="count-fact"></small>
+            <label>
+              ② 分かったこと（事実）
+              <textarea id="memo-fact" rows="4" placeholder="例：若い世代の投票率が低い。理由は〜"></textarea>
             </label>
 
-            <label>③ 気づいたこと（自分の考えを入れる）
-              <textarea id="memo-surprise" rows="4" data-min="50" data-target="100" placeholder="理由＋具体例を入れて書こう"></textarea>
-              <small class="counter" id="count-surprise"></small>
+            <label>
+              ③ びっくりしたこと・気づいたこと
+              <textarea id="memo-surprise" rows="3" placeholder="例：自分の一票も大切だと分かった。"></textarea>
             </label>
 
-            <label>④ 自分にできること（行動まで書く）
-              <textarea id="memo-action" rows="4" data-min="50" data-target="100" placeholder="自分の生活と結びつけて書こう"></textarea>
-              <small class="counter" id="count-action"></small>
+            <label>
+              ④ 自分にできること
+              <textarea id="memo-action" rows="3" placeholder="例：ニュースを見て、家族と話し合う。"></textarea>
             </label>
           </div>
-
-          <div class="checklist">
-            <h3>✅ これを書こうチェック</h3>
-            <ul>
-              <li>理由を書いているか</li>
-              <li>具体例を書いているか</li>
-              <li>自分の考えが入っているか</li>
-            </ul>
-          </div>
-
-          <section class="summary-template">
-            <h3>🧩 まとめテンプレ</h3>
-            <textarea id="sum-problem" rows="2" placeholder="① 問題"></textarea>
-            <textarea id="sum-cause" rows="2" placeholder="② 原因"></textarea>
-            <textarea id="sum-solution" rows="2" placeholder="③ 解決策"></textarea>
-            <textarea id="sum-opinion" rows="3" data-min="80" data-target="120" placeholder="④ 自分の考え（理由＋具体例必須）"></textarea>
-            <small class="counter" id="count-opinion"></small>
-            <textarea id="sum-one" rows="2" data-min="50" data-target="80" placeholder="一文まとめ（50〜80字）"></textarea>
-            <small class="counter" id="count-one"></small>
-          </section>
-
-          <section class="compare-frame">
-            <h3>⚖️ 比較フレーム</h3>
-            <div class="columns">
-              <textarea id="compare-a" rows="3" placeholder="Aの特徴"></textarea>
-              <textarea id="compare-b" rows="3" placeholder="Bの特徴"></textarea>
-            </div>
-            <textarea id="compare-common" rows="2" placeholder="共通点"></textarea>
-            <textarea id="compare-judge" rows="3" data-min="80" data-target="120" placeholder="どちらがよいか＋理由（80字以上）"></textarea>
-            <small class="counter" id="count-judge"></small>
-          </section>
 
           <div class="memo-actions">
             <button id="copy-btn" type="button">📋 ノートをコピー</button>
-            <button id="slide-btn" type="button">🎤 発表モード作成</button>
             <button id="clear-btn" type="button" class="danger">🧹 ノートを消す</button>
           </div>
           <p id="toast" class="toast" role="status"></p>
-          <section id="slides" class="slides"></section>
         </section>
       </section>
     </main>
+
+    <footer>
+      <p>🌈 ちがいを知ることは、やさしい社会をつくる第一歩！</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
